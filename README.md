@@ -5,6 +5,10 @@ Create an app that simulates a mini pokedex using [The open Pokemon API](https:/
 
 Make sure to use git a Source Code Version Manager and keep your commits small with clear commit messages(For reference, the requirements listed below could each be considered a commit.). You can use any git hosting service. Make sure the repository is public so we can clone/fork it. 
 
+The main goal here is to get the two UI pages mocked up and functional using the API that is available. The requirements simply define that we expect you to build 2 views based on the UI images using the Pokedex API. We want you to do this with React, Redux, and ReactRouter while adhering to the pokedex's rule; "Locally cache resources and images whenever you request them."
+
+Feel free to leave comments explaining your thoughts or work. We want to establish a bases for what you know and we will use this assignment as a talking point if we decide to interview.
+
 
 ## Prerequisites
 1. [React](https://reactjs.org/docs/getting-started.html)
@@ -17,9 +21,10 @@ Make sure to use git a Source Code Version Manager and keep your commits small w
 1. Create a list view with hard coded pokémon names. Feel free to use any pokémon.(api/v2/pokemon will show you available pokémon names)
 2. Implement a filter search bar above of the pokémon list to filter your pokémon by name
 3. Style the [List view](https://github.com/dannysperry/react-pokedex-assignment/blob/master/list_poke.png)
+  * You don't need to worry about having images or pokemon numbers at this point. That will be step 11.
 4. Setup `ReactRouter` with a root route that renders the List view.
-5. Add another Route that points to `/:pokémon_name` and renders a [Detail view](https://github.com/dannysperry/react-pokedex-assignment/blob/master/detail_poke.png).
-  * Make sure List view and Detail View use seperate Components
+5. Add another Route that accepts a dynamic name like `pokemon/:pokémon_name` which renders a Detail view component.
+  * Make sure the List view and the Detail View use seperate Components.
 6. Allow clicking a pokémon name to load the Detail view for that pokémon.
 7. Connect the List view to [The open Pokemon API](https://pokeapi.co/api/v2/pokemon) using `fetch`
   * Change hard coded list into fetch response.
@@ -31,4 +36,3 @@ Make sure to use git a Source Code Version Manager and keep your commits small w
   * You'll want to have a getPokemon(pokémon_name) action that gets pokémon details from the redux list
 10. Style the [Detail view](https://github.com/dannysperry/react-pokedex-assignment/blob/master/detail_poke.png)
 11. Add a sprite image above each pokémon name in the List view.
-
